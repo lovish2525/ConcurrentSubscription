@@ -11,7 +11,7 @@ build:
 ## run: builds and runs the application
 run: build
 	@echo "Starting..."
-	@env DSN=${DSN} REDIS=${REDIS} ./${BINARY_NAME} &
+	@env DSN=${DSN} REDIS=${REDIS} ./${BINARY_NAME}
 	@echo "Started!"
 
 ## clean: runs go clean and deletes binaries
@@ -36,3 +36,11 @@ restart: stop start
 ## test: runs all tests
 test:
 	go test -v ./...
+
+## migrate: run database migrations
+migrate:
+	goose -dir ./migrations postgres "postgres://lovish.kumar:yourpassword@localhost:5432/concurrency?sslmode=disable" up
+
+## migrate-down: rollback database migrations
+migrate-down:
+	goose -dir ./migrations postgres "postgres://lovish.kumar:yourpassword@localhost:5432/concurrency?sslmode=disable" down
