@@ -13,6 +13,7 @@ import (
 )
 
 func (app *Config) HomePage(w http.ResponseWriter, r *http.Request) {
+	app.InfoLog.Println("Here")
 	app.render(w, r, "home.page.gohtml", nil)
 }
 
