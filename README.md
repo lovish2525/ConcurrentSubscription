@@ -1,6 +1,6 @@
-# MyApp
+# ConcurrentSubscription
 
-MyApp is a web application built with Go, PostgreSQL, and Redis. It provides user authentication, subscription plans, and more.
+ConcurrentSubscription is a web application built with Go, PostgreSQL, and Redis. It provides user authentication, subscription plans, and more.
 
 ## Features
 
@@ -20,8 +20,8 @@ MyApp is a web application built with Go, PostgreSQL, and Redis. It provides use
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/myapp.git
-    cd myapp
+    git clone https://github.com/yourusername/ConcurrentSubscription.git
+    cd ConcurrentSubscription
     ```
 
 2. Set up the environment variables:
